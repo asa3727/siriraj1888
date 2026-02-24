@@ -259,35 +259,16 @@
 
   /* === IMAGE AREA === */
 .image-area img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;   /* ไม่ครอป */
-  z-index: 1;
+  object-fit: contain;   /* เต็มกรอบแต่ไม่ครอป */
+  display: block;
 }
-  .image-placeholder {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-  }
 
 .image-placeholder {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
-
-  z-index: 2; /* อยู่บนภาพ */
+  z-index: 2;
 }
 
   .prompt-label {
@@ -550,7 +531,8 @@
       <div class="page-divider"></div>
       
 <div class="image-area">
-  <img src="page01.png" class="story-image">
+  <img src="page01.png"
+     <div class="image-placeholder">
 </div>
 
       <div class="content-card">
